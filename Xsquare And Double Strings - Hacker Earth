@@ -1,0 +1,44 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+int main() {
+	int tc;
+	cin >> tc;    //Reading input from STDIN
+	while(tc>0)
+	{
+		vector<int> vect(26);
+		string str;
+		
+
+		cin>>str;
+		int a;
+		int i =0;
+
+		for( i; i<str.size();i++)
+		{
+			a = int(str[i])-97;
+			vect[a]++;
+			
+			if(vect[a]==2)
+			{
+				cout<<"Yes"<<endl;
+				break;
+			}
+			
+
+		}
+		if(i==str.size())
+		{
+			cout<<"No"<<endl;
+		}
+		tc--;
+		
+		
+
+		
+	}
+	return 0;
+}
