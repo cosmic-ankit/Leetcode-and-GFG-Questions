@@ -1,0 +1,33 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    
+        int length;
+        cin >> length;
+		int k;
+		cin>>k;
+		vector <int> a(length);
+        vector<int> store(length,0);
+		int i=0;
+		for(i;i<length;i++)
+		{
+			cin>>a[i];
+			if(store[a[i]]==1)
+			{
+				cout<<"Yes"<<endl;
+				break;
+			}
+			store[k-a[i]]=1;
+		}
+		if(i==length)
+		{
+			cout<<"No"<<endl;
+		}
+	
+return 0;
+
+		
+}
