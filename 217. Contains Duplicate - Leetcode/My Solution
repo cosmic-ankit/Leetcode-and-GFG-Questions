@@ -1,0 +1,28 @@
+// vector<int> store (1e5+10, 0);
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) 
+    {
+        map<int,int> store;
+        int i = 0;
+        // while(i<nums.size())
+        // {
+            
+        //     store[nums[i]]++;
+        //     if(store[nums[i]]>1)
+        //     {
+        //       cout<<i<<endl;
+        //         return true;
+        //     }
+        //     i++;
+
+        // }
+        for(i=0;i<nums.size();i++){
+            store[nums[i]]++;
+            if(store[nums[i]]>=2){
+                return true;
+            }
+        }
+        return false;
+    }
+};
