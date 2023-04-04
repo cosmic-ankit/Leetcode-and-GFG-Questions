@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int partitionString(string s) 
+    {
+        map <char,int> vect;
+        int length = s.size()-1;
+        int count = 0;
+
+        for(int i = 0; i<=length;i++)
+        {
+…            vect[s[i]]++;
+            
+            
+
+        }
+        return count+1;
+        
+    }
+};
