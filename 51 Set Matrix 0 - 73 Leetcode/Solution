@@ -1,0 +1,19 @@
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix)
+    {
+       int rlength = matrix.size()-1;
+       int clength = matrix[0].size()-1;
+
+       vector<int> s;
+
+      
+…           {
+               matrix[i][k]=0;
+               k++;
+           }
+
+           
+       }      
+    }
+};
