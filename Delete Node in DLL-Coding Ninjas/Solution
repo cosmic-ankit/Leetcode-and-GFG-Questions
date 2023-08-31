@@ -2,35 +2,33 @@
  * Definition of doubly linked list:
  *
  * struct Node {
- *      int value;
+ *      int data;
  *      Node *prev;
  *      Node *next;
- *      Node() : value(0), prev(nullptr), next(nullptr) {}
- *      Node(int val) : value(val), prev(nullptr), next(nullptr) {}
- *      Node(int val, Node *p, Node *n) : value(val), prev(p), next(n) {}
+ *      Node() : data(0), prev(nullptr), next(nullptr) {}
+ *      Node(int val) : data(val), prev(nullptr), next(nullptr) {}
+ *      Node(int val, Node *p, Node *n) : data(val), prev(p), next(n) {}
  * };
  *
  *************************************************************************/
 
-Node * insertAtTail(Node *head, int k) 
+Node * deleteLastNode(Node *head)
 {
-Node* temp = new Node();
-temp=head;
 
-if(head==nullptr)
-{
-    Node* rote = new Node(5);
-    head=rote;
-}
-else{
-    while (head->next != nullptr) {
-      head = head->next;
+    if(head->next==nullptr)
+    {
+        head = nullptr ;
+        return head;
     }
-    Node *node = new Node(k);
+    else {
+    Node* aage = head->next;
+    Node* temp = head;
 
-    head->next = node;
-    node->prev = head;
-
+    while (aage->next != nullptr) {
+      head = head->next;
+      aage = aage->next;
+    }
+    head->next = nullptr;
     return temp;
-}
+    }
 }
